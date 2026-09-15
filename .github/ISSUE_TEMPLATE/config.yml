@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability
+    url: https://github.com/RedAssay/.github/blob/main/SECURITY.md
+    about: Never report a vulnerability in a public issue. Our disclosure policy, scope and safe harbour are here.
+  - name: Request a scoped assessment or a pilot
+    url: https://cal.com/redassay/demo
+    about: Talk to us about running RedAssay against an application you are authorised to assess.
+  - name: Question about the product
+    url: mailto:hello@redassay.com
+    about: Anything that is not a bug or a feature request. A human answers.

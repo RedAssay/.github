@@ -1,0 +1,47 @@
+name: Feature request
+description: Propose a capability, a detector, or a change in behaviour.
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What are you trying to do, and where does it break down today? Describe the situation, not the solution.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you would like to happen
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What you tried or considered instead
+      description: Including "nothing, I do it by hand", which is useful for us to know.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Detection, a new vulnerability class or check
+        - Capture, browser, auth flows, or network capture
+        - The confirm gate and replay verification
+        - Reporting, JSON, SARIF, PDF, or compliance mappings
+        - Operator console
+        - CI and integrations
+        - Safety, scope, or audit logging
+        - Something else
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        If you are proposing a detector, say what signal it reads and how a finding from it
+        would be proven by replay. A check whose result cannot be re-derived
+        deterministically will not pass the gate, so it will not ship.

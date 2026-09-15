@@ -1,0 +1,65 @@
+name: Bug report
+description: Something behaves differently from how it is documented or intended.
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Security vulnerabilities do not go here. Follow
+        [SECURITY.md](https://github.com/RedAssay/.github/blob/main/SECURITY.md) instead.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you observed, and what you expected instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: The sequence we can repeat. Paste the run that reproduces it if you have one.
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs, output, or a run ID
+      description: >
+        Paste the relevant output. We redact run logs at the store boundary, but a paste
+        into this form is not redacted, so remove your own secrets and any customer data
+        first.
+      render: shell
+
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: A release tag, a commit SHA, or the image digest you ran.
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: "macOS 15 · Go 1.26 · Node 22 · Docker 27"
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Before you file
+      options:
+        - label: This is not a security vulnerability. Those go to SECURITY.md.
+          required: true
+        - label: Any target I mention is one I am authorised to assess, and I have not pasted third-party data.
+          required: true
+        - label: I searched existing issues.
+          required: true

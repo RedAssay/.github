@@ -1,0 +1,4 @@
+.DS_Store
+
+# graft context-graph cache — tool state, not repo content
+graft/
